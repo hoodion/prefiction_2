@@ -1,20 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import path from 'path' // Keep this import for the resolve alias
 
 export default defineConfig({
-  root: path.resolve(__dirname),
   plugins: [react()],
   resolve: {
+    // Keep your alias for component imports
     alias: {
       '@': path.resolve(__dirname, 'src')
     }
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html')
-      }
-    }
   }
+  // Remove: root: path.resolve(__dirname),
+  // Remove: build: { ... }
 })
