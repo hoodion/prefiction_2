@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small helper used in component */
+.card-tilt {
+  transform: translateZ(0);
+}
